@@ -1,0 +1,5 @@
+RewriteRule On
+RewriteRule ^([0-9]+) index.php?page=$1
+RewriteRule ^math/([0-9]+) sent.php?id=$1
+RewriteRule ^post/([0-9]+) post.php?id=$1
+RewriteRule ^user/([0-9]+) user.php?id=$1
