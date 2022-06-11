@@ -7,10 +7,11 @@
 		'default_graph_version'  => 'v8.0'
 	]);
 function mail_v1($to,$subject,$msg){
- 
+
   mail($to, $subject, $message, $headers);
 }
-$db = mysqli_connect('localhost', 'root', '1234', 'mathsocm_db2');
+$db = mysqli_connect("ls-3cafb89f8997e4de71cc96223bc939e463dd3be7.c34z5emfo7ly.ap-northeast-1.rds.amazonaws.com", "basic_user", "1234", "mathsoc");
+$db->set_charset("utf8");
 $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; date_default_timezone_set("Asia/Ulaanbaatar");
 $time=(new DateTime())->format("Y-m-d G:i:s");
 $time_short=(new DateTime())->format("Y-m-d");
